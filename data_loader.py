@@ -131,7 +131,7 @@ class DataLoader(object):
 
         Args:
           split:        'train' OR 'val' OR 'test' OR 'full'.
-          story_type:   'plot', 'subtitle', 'dvs', 'script'.
+          story_type:   'plot', 'split_plot', 'subtitle', 'dvs', 'script'.
 
         Returns:
           story:        Story for each movie indexed by imdb_key.

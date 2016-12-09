@@ -24,7 +24,7 @@ class StoryLoader(object):
     """Data loader class."""
 
     def __init__(self):
-        self.available_types = ['plot', 'subtitle', 'dvs', 'script']
+        self.available_types = ['plot', 'split_plot', 'subtitle', 'dvs', 'script']
 
     def _check_exists(self, filename):
         """Check that the story file exists and is OK to load.
