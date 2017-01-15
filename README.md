@@ -46,6 +46,36 @@ We provide a simple interface to load all the data (QAs, movies) and stories thr
 If you wish to modify something, you are welcome to use your own data loaders and access the raw data directly.
 The evaluation server submissions are simple text files (explained after login) and are independent of any data loaders.
 
+---
+
+#### qa.json
+- <code>qid</code>: A unique id for every question. Also indicates, train|val|test sets
+- <code>imdb_key</code>: The movie this question belongs to
+- <code>question</code>: The question string
+- <code>answers</code>: The five answer options
+- <code>correct_index</code>: Correct answer option (indexed by 0)
+- <code>plot_alignment</code>: split_plot file line numbers, to which this question corresponds
+- <code>video_clips</code>: Clips that are aligned with the question, to be used for answering
+
+
+#### movies.json
+- <code>imdb_key</code>: A unique id for every movie. Corresponds to that used by IMDb
+- <code>name</code>: Movie title
+- <code>year</code>: Movie release year
+- <code>genre</code>: Movie genre classification
+- <code>text</code>: Text sources that are available for that movie
+
+
+----
+
+### Data Releaselog
+- 2017.01.14: Alignments between question and plot sentence, plot sentence and video clips
+- 2016.11.08: Patch for 65 missing video clips
+- 2016.09.10: Video meta-data released: Shot boundaries, frame-timestamp correspondence
+- 2016.04.06: Removed missing video clips from qa.json
+- 2016.03.30: v1.0 data release
+
+
 ----
 
 ### Requirements
